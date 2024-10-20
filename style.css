@@ -1,0 +1,456 @@
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: "Dongle-light";
+    src: url("Dongle/Dongle-Light.ttf");
+}
+
+@font-face {
+    font-family: "Dongle-regular";
+    src: url("Dongle/Dongle-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Dongle-bold";
+    src: url("Dongle/Dongle-Bold.ttf");
+}
+
+body {
+    font-family: "Dongle-regular", Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: orange;
+    padding: 20px;
+    color: white;
+}
+
+.logo img {
+    max-width: 150px;
+}
+
+.nav-menu ul {
+    display: flex;
+}
+
+.nav-menu li {
+    list-style: none;
+    margin-right: 20px;
+}
+
+.nav-menu li:last-child {
+    margin-right: 0;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    font-family: "Dongle-bold";
+    font-size: 1.6rem;
+    color: white;
+    transition: all ease 0.3s;
+}
+
+.nav-menu a:hover {
+    color: lightgoldenrodyellow;
+}
+
+.hero {
+    background-image: url('imageshero.jpg'); 
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero h2 {
+    font-family: "Dongle-bold";
+    font-size: 3rem;
+}
+
+.hero p {
+    font-family: "Dongle-regular";
+    font-size: 1.6rem;
+    margin-top: 10px;
+}
+
+#pandals {
+    padding: 40px 20px;
+}
+
+#pandals h2 {
+    text-align: center;
+    font-family: "Dongle-bold";
+    font-size: 2.4rem;
+    margin-bottom: 20px;
+}
+
+.destination-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+    margin-top: 20px;
+}
+
+.destination-item {
+    text-align: center;
+    background: whitesmoke;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.destination-item h3 {
+    font-size: 1.8rem;
+    font-family: "Dongle-bold";
+}
+
+.destination-item button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    background-color: orange; 
+    color: white;
+    border-radius: 5px;
+    font-family: "Dongle-regular";
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.destination-item button:hover {
+    background-color: coral; 
+}
+
+.map-section {
+    padding: 40px 20px;
+}
+
+footer {
+    background-color: darkslategray; 
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    font-family: "Dongle-regular";
+    font-size: 1.4rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .destination-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero h2 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.4rem;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-menu {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .destination-item {
+        margin-bottom: 20px;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+}
+
+/* Contact Section Styles */
+.contact {
+    padding: 60px 20px;
+    background-color: white; 
+    text-align: center;
+}
+
+.contact h2 {
+    font-family: "Dongle-bold";
+    font-size: 2.6rem;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    font-family: "Dongle-regular";
+    font-size: 1.4rem;
+    margin-bottom: 40px;
+}
+
+/* Contact Cards Layout */
+.contact-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+/* Individual Contact Card */
+.contact-card {
+    background-color: white; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    padding: 30px 20px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-10px);
+}
+
+.contact-card i {
+    font-size: 36px;
+    color: orange; 
+    margin-bottom: 15px;
+}
+
+.contact-card h4 {
+    font-family: "Dongle-bold";
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.contact-card p {
+    font-family: "Dongle-regular";
+    font-size: 1.4rem;
+}
+
+/* Contact Form Styles */
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input, textarea {
+    width: 70%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    font-size: 1.4rem;
+    font-family: "Dongle-regular";
+}
+
+textarea {
+    height: 150px;
+}
+
+.form button {
+    display: inline-block;
+    color: white;
+    background-color: orange; 
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-family: "Dongle-light";
+    font-size: 1.6rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form button:hover {
+    background-color: coral; 
+}
+
+
+@media (max-width: 768px) {
+    .contact-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    input, textarea {
+        width: 90%;
+    }
+}
+
+footer {
+    background-color: darkslategray; 
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-left, .footer-right {
+    flex: 1;
+    margin: 20px;
+}
+
+.footer-left h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.footer-left p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.footer-right h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.social-icons a {
+    display: inline-block;
+    color: white;
+    font-size: 20px;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: lightgoldenrodyellow; 
+}
+
+.footer-credit {
+    font-size: 14px;
+    margin-top: 30px;
+    border-top: 1px solid #444; 
+    padding-top: 20px;
+}
+
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
+#pandals {
+    padding: 20px;
+    background-color: #f9f9f9; 
+}
+
+.destination-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.destination-item {
+    flex: 1 1 calc(33.333% - 20px); 
+    margin: 10px; 
+    background-color: white; 
+    border: 1px solid #ddd; 
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.destination-item:hover {
+    transform: scale(1.05);
+}
+
+.destination-item h3 {
+    text-align: center;
+    padding: 10px;
+    font-size: 1.5em;
+    color: gray; 
+}
+
+.destination-item img {
+    width: 100%; 
+    height: auto; 
+    object-fit: cover; 
+}
+
+.destination-item button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: orange; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.destination-item button:hover {
+    background-color: darkorange; 
+}
+
+
+#about {
+    padding: 20px;
+    background-color: #f1f1f1; 
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+    color: gray; 
+}
+
+#about p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: gray; 
+    max-width: 800px; 
+    margin: 0 auto; 
+}
+
+.map-controls {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.map-controls button {
+    margin: 0 10px;
+    padding: 10px 15px;
+    font-size: 1em;
+    background-color: orange; 
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.map-controls button:hover {
+    background-color: darkorange; 
+}
